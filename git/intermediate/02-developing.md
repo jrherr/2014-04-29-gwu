@@ -115,6 +115,14 @@ some changes to our repository.
 
 ## Seeing Changes
 
+In the previous lesson, we used `git checkout` to undo some changes
+we had made to a file.  We also learned about `diff` output, which is
+a common way for computers to tell us how two text files differ.  In
+this section, we'll learn about the `git status` and `git diff`
+commands, which help us see changes in our repository.  We'll also learn
+how to use the `git show` command to retrieve a copy of a file from
+anywhere in our repository's history.
+
 ## Staging Changes
 
 ## Committing Changes
