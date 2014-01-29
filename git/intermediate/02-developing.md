@@ -54,19 +54,24 @@ When a repository is created, Git creates a branch called `master`.
 Unlike HEAD, the only thing special about `master` is that it's the
 default name given to this branch.  It's generally not a great idea to
 work directly on `master`, so we'll start this lesson by creating a new
-branch from it for development.  
+branch from it for development.
 
 By default, Git creates branches that point to the currently
 checked-out revision.  We would like to start our development at the
 most up-to-date version of the repository, so we check out our local
-copy of the `master` branch first.
+copy of the `master` branch first.  This `checkout` command performs
+two actions.  First, it checks out the repository to the commit
+pointed to by the `master` branch, in this case: `61fd2bc`.  Second,
+it *activates* the `master` branch.  Keep in mind, Git will
+automatically move the active branch pointer for you when you make
+commits.
 
 ~~~
 $ git checkout master
 Switched to branch 'master'
 ~~~
 
-We can create and checkout a branch in the same step by adding the
+We can create and activate a branch in the same step by adding the
 `-b` flag to `git checkout`.  Since later we'll be fixing an error
 in the  file `python_pipeline.ipy`, we'll name the branch
 `fix_pipeline`.
@@ -78,6 +83,9 @@ Switched to a new branch 'pipeline_fix'
 
 We can see the current branches available with `git branch`, but this
 command is much more useful if we add the `-v` flag (for verbose).
+Note that `git branch` lists the local branches in our repository,
+`master` and `pipeline_fix`, which we just created.  The `*` next to
+`pipeline_fix` indicates that it is active.
 
 ~~~
 $ git branch -v
@@ -87,6 +95,23 @@ $ git branch -v
 
 Now that we've created our development branch, let's start preparing
 some changes to our repository.
+
+
+### Checkpoint 1
+
+* **[1A]** The `--decorate` argument to `git log` will annotate your
+  history view with the location of your current branches.  Try
+  calling `git log --oneline --decorate`.  Discuss with your partner
+  what you think `origin/master` refers to.
+* **[1B]** The `DETACHED HEAD` state occurs when the repository does
+  not have an active branch, frequently after checking out a commit or
+  remote reference.  Try calling the command `git checkout 61fd` and
+  explaining the output message to your partner.
+* **[1C]** You can use `git branch -D` to delete a branch that is not
+  active.  Remember that this only deletes your local reference to a
+  commit.  Try deleting the `master` branch in your repository by
+  calling `git branch -D master`.
+
 
 ## Seeing Changes
 
