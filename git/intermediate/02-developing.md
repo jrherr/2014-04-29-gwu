@@ -123,8 +123,71 @@ commands, which help us see changes in our repository.  We'll also learn
 how to use the `git show` command to retrieve a copy of a file from
 anywhere in our repository's history.
 
+* make some changes
+* view with git status and git diff
+* show original version of file
+* restore original version with git checkout
+
 ## Staging Changes
+
+We're one step closer to storing our changes into the history of our
+repository.  Since we frequently make changes across many of our files
+while we are working, but are only interested in saving some of these
+changes into the repository, Git introduces the concept of *staging*.
+
+To communicate which changes we would
+like to save, we put them in the *stage*.  Think of the stage like a
+set at a camera studio.   We can add and remove files from the
+stage in preparation for saving our changes to history. Everything on
+the *stage* will be in the picture when it's taken (in Git-speak, commit).  
+
+We stage the two files we changed with the `git add` command.
+
+Now let's see how that affected the output of `git status`.
+
+And how it affected the output of `git diff`.
+
+We can unstage changes with the `git reset` command.
+
+If we want to both unstage changes and discard them, we use the
+`--hard` flag to `git reset`.  
+
+*Hint: You may see the words index and cache in the documentation or
+ while reading about Git.  These terms both refer to the stage!*
+
+
+### Exercises
+
+* Learn about `git rm` and how to use it to stage removal of a file.
+* Learn how to undo `git rm`.
+* Learn how to use `git reset --hard` to undo all changes to the
+  staging area and the working directory.
+* Learn how to use `git reset --hard` to move a branch.
 
 ## Committing Changes
 
+* Walk through `git commit` using the `nano` editor.
+* Use email metaphor for `git commit`.
+* make a couple of commits on the development branch.
+* use `git log --decorate` to see revisions, how they differ.
+* Explain how Git commits are like lightweight publishing.
+  + Simple to make, yet allow you to easily "sign" revisions of very
+    complicated objects.
+  + Like a lab notebook.  Can be well-categorized or it can be very
+    sketchy.  Use it the way that it complements your workflow.  But
+    always commit at the end of the day, even if it's something you
+    will throw away later.
+
+### Integrative Exercise
+
+* Checkout master.  Make a commit.  Now swap the positions of the two
+  branches, by either moving the branches with `git reset` or by
+  deleting them and recreating them in the appropriate positions.
+
 ## Review
+
+* branches
+* viewing changes
+* staging changes
+* committing changes
+
