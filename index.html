@@ -1,16 +1,16 @@
 ---
 layout: bootcamp
 root: .
-venue: Euphoric State University
-address: 123 College Street, Euphoria
+venue: George Washington University
+address: Virginia Science and Technology Campus, Ashburn, VA
 country: United-States
-humandate: Feb 17-18, 2020
+humandate: Apr 29-30, 2014
 humantime: 9:00 am - 4:30 pm
-startdate: 2020-06-17
-enddate: 2020-06-18
-latlng: 41.7901128,-87.6007318
+startdate: 2014-04-29
+enddate: 2014-04-30
+latlng: 39.059322,-77.445661
 registration: restricted
-instructor: ["Grace Hopper", "Alan Turing"]
+instructor: ["Aron Ahmadia", "Joshua R. Herr", "William Rowell"]
 contact: admin@software-carpentry.org
 ---
 <!--
@@ -18,26 +18,18 @@ contact: admin@software-carpentry.org
     Please use three-letter month names for the 'humandate' field.
 -->
 
-<!-- Remove the block below. -->
-<div align="center">
-  <p><strong><em>
-      This page is a template for bootcamp home pages.
-      <br/>
-      Please see
-      <a href="https://github.com/swcarpentry/bc">https://github.com/swcarpentry/bc</a>
-      for instructions on how to create
-      a repository for your bootcamp.
-  </em></strong></p>
-</div>
-
-<!--
-    This block includes the Eventbrite registration widget if 'eventbrite' has been set in the header.
--->
-{% if page.eventbrite %}
-<iframe src="http://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt" frameborder="0" width="100%" scrolling="auto"></iframe>
-{% endif %}
 
 <h2>General Information</h2>
+
+<div class="span10">
+              George Washington University, <a href="http://virginia.gwu.edu">Virginia Science and Technology Campus</a>, Ashburn, VA
+              <br>
+              Hosted by the IMPACT project and sponsored by Professors Tarek El-Ghazawi & Lorena Barba
+              <br>
+              April 29th-30th, 2014
+              <br>
+              9:00 am - 4:30 pm
+</div>
 
 <p>
   <a href="http://software-carpentry.org">Software Carpentry</a>'s mission
@@ -63,9 +55,37 @@ contact: admin@software-carpentry.org
     or if specialized prerequisite knowledge is required, please mention that.
 -->
 <p>
-  <strong>Who:</strong>
-  The course is aimed at graduate students and other researchers.
+  <strong>What:</strong>
+  Our goal is to help scientists and engineers become more productive
+  by teaching them basic computing skills like program design, version
+  control, testing, and task automation. In this two-day bootcamp,
+  short tutorials will alternate with hands-on practical
+  exercises. Participants will be encouraged both to help one another,
+  and to apply what they have learned to their own research problems
+  during and between sessions. Attendants are offered online office hours:
+  regular events to get one-on-one help from Software Carpentry instructors,
+  online.
 </p>
+
+<p>
+  <strong>Who:</strong>
+  The course is aimed at postgraduate students and other scientists
+  who are familiar with basic programming concepts (like loops,
+  conditionals, arrays, and functions) but need help to translate this
+  knowledge into practical tools to help them work more
+  productively.
+</p>
+
+<p>
+  <strong>Content:</strong> The syllabus for this bootcamp will include:
+</p>
+<ul>
+  <li>Using the shell to do more in less time.</li>
+  <li>Using version control to manage and share information.</li>
+  <li>Basic Python programming.</li>
+  <li>How (and how much) to test programs.</li>
+  <li>Documentation and debugging.</li>
+</ul>
 
 <!--
     This block displays the address and links to a map showing directions.
@@ -107,26 +127,107 @@ contact: admin@software-carpentry.org
 
 <hr/>
 
+<p>
+<h3>Etherpad Link</h3>
+<div id="etherpad-link" class="row-fluid">
+    We will use an <a href="https://etherpad.mozilla.org/I1hRwJkSSy">Etherpad page</a> to communicate and share notes together throughout the bootcamp.
+  </div>
+
+<hr>
+
 <!--
     Edit this block to show the syllabus and schedule for your bootcamp.
 -->
-<h2>Schedule</h2>
+<h2>Tentative Schedule</h2>
 
-<table class="table table-striped">
-  <tr> <td>Monday</td>  <td>09:00</td>  <td>Introduction to task automation with the Unix shell</td> </tr>
-  <tr> <td></td>        <td></td>       <td>Coffee will be served at 10:30.</td> </tr>
-  <tr> <td></td>        <td>12:00</td>  <td>Lunch break</td> </tr>
-  <tr> <td></td>        <td>13:00</td>  <td>Building programs with Python</td> </tr>
-  <tr> <td></td>        <td></td>       <td>Coffee will be served at 14:30.</td> </tr>
-  <tr> <td></td>        <td>16:00</td>  <td>Wrap-up</td> </tr>
-  <tr> <td>Tuesday</td> <td>09:00</td>  <td>Version control with Git</td> </tr>
-  <tr> <td></td>        <td></td>       <td>Coffee will be served at 10:30.</td> </tr>
-  <tr> <td></td>        <td>12:00</td>  <td>Lunch break</td> </tr>
-  <tr> <td></td>        <td>13:00</td>  <td>Managing data with SQL</td> </tr>
-  <tr> <td></td>        <td></td>       <td>Coffee will be served at 14:30.</td> </tr>
-  <tr> <td></td>        <td>15:00</td>  <td>Putting it all together</td> </tr>
-  <tr> <td></td>        <td>16:00</td>  <td>Wrap-up</td> </tr>
-</table>
+      <div id="schedule" class="row-fluid">
+        <div class="span6">
+          <strong>Day 1</strong>
+          <table class="table" style="width:80%;">
+            <tbody>
+            <tr>
+                <td>8:30 - 9:00</td>
+                <td style="text-align: right;">Installation help (optional)</td>
+              </tr>
+              <tr>
+                <td>9:00 - 9:30</td>
+                <td style="text-align: right;">Introduction</td>
+              </tr>
+              <tr>
+                <td>9:30 - 10:45</td>
+                <td style="text-align: right;"><a href="#">The Shell</a></td>
+              </tr>
+              <tr>
+                <td>10:45 - 11:00</td>
+                <td style="text-align: right;">Break</td>
+              </tr>
+                <tr>
+                <td>11:00 - 12:30</td>
+                <td style="text-align: right;"><a href="#">Scientific Programming I</a></td>
+              </tr>
+              <tr>
+                <td>12:30 - 1:30</td>
+                <td style="text-align: right;">Lunch</td>
+              </tr>
+              <tr>
+                <td>1:30 - 3:00</td>
+                <td style="text-align: right;"><a href="#">Scientific Programming II</a></td>
+              </tr>
+              <tr>
+                <td>3:00 - 3:15</td>
+                <td style="text-align: right;">Break</td>
+              </tr>
+              <tr>
+                <td>3:15-4:45</td>
+                <td style="text-align: right;"><a href="#">Data and Figures</a></td>
+              </tr>
+               <tr>
+                <td>4:45 - 5:00</td>
+                <td style="text-align: right;">Wrap up</td>
+              </tr>
+             </tbody>
+          </table>
+      </div>
+          <div class="span6">
+
+          <strong>Day 2</strong>
+          <table class="table" style="width:80%;">
+            <tbody>
+           <tr>
+                <td>9:00 - 10:45</td>
+                <td style="text-align: right;"><a href="#">Version Control I</a></td>
+            </tr>
+            <tr>
+                <td>10:45 - 11:00</td>
+                <td style="text-align: right;">Break</td>
+           </tr>
+           <tr>
+                <td>11:00 - 12:00</td>
+                <td style="text-align: right;"><a href="#">Version Control II</a></td>
+           </tr>
+              <tr>
+                <td>12:00 - 1:00</td>
+                <td style="text-align: right;">Lunch</td>
+              </tr>
+              <tr>
+                <td>1:00 - 2:45</td>
+                <td style="text-align: right;"><a href="#">Testing and modules</a></td>
+              </tr>
+                <tr><td>2:45 - 3:00</td>
+                <td style="text-align: right;">Break</td>
+              </tr>
+              <tr>
+                <td>3:00 - 4:00</td>
+                <td style="text-align: right;"><a href="#">Reproducible Workflow</a></td>
+              </tr>
+              <tr>
+                <td>4:00 - 4:30</td>
+                <td style="text-align: right;">Discussion and Wrap Up</td>
+              </tr>
+           </tbody>
+          </table>
+        </div>
+      </div> <!-- schedule -->
 
 <hr/>
 
@@ -146,3 +247,49 @@ contact: admin@software-carpentry.org
 </p>
 
 {% include setup.html %}
+
+
+
+<h2>Reference</h2>
+
+<ul>
+  <li><a href="http://swcarpentry.github.io/2014-01-31-ucsb/lessons/ref/shell.html">The Unix Shell</a></li>
+  <li><a href="http://swcarpentry.github.io/2014-01-31-ucsb/lessons/ref/python.html">Python</a></li>
+</ul>
+
+<hr>
+
+<h2>Instructors</h2>
+
+<div class="media">
+  <img class="media-object pull-left" src="./img/ahmadia.jpg" alt="Aron Ahmadia">
+  <div id="ahmadia.a" class="media-body">
+    Aron Ahmadia works at the intersection of applied mathematics, software engineering, and application domains as diverse as adaptive optics, semiconductor lithography, and ice-sheet modeling. His focus is in the collaborative development of robust, reproducible, and scalable software tools for computational science.
+  </div>
+</div>
+<div class="media">
+  <img class="media-object pull-left" src="./img/herr.jpg" alt="Josh Herr">
+  <div id="herr.j" class="media-body">
+    Josh Herr is a post-doctoral researcher at Michigan State University in the Department of Microbiology & Molecular Genetics. He holds a B.S. in Biochemistry, M.S. in Plant Biology, and a Ph.D. in Integrative Biology. His research interests introduced him to phylogenetics at the command line and he has transitioned from the lab bench (almost entirely) to the computational analysis of microbial genomes and metagenomes. Josh blogs about his research interests at Cyme & Cystidium and is an editor at the bioinformatics help forum Biostar.
+  </div>
+</div>
+<div class="media">
+  <img class="media-object pull-left" src="./img/rowell.jpg" alt="Billy Rowell">
+  <div id="rowell.b" class="media-body">
+    Billy Rowell is a Research Specialist for the Howard Hughes Medical Institute at the Janelia Farm Research Campus.  Trained primarily as a geneticist and molecular biologist, he has studied plant disease resistance, fruit fly development, and gene expression.  Currently he works in behavioral neuroscience, where he develops tools to process large sets of behavioral data.
+  </div>
+</div>
+
+<hr>
+
+<div class="footer">
+  <a class="label swc-blue-bg" href="https://www.facebook.com/SoftwareCarpentry">Facebook</a>
+  <a class="label swc-blue-bg" href="https://plus.google.com/u/0/114244759874490019250/posts">Google+</a>
+  <a class="label swc-blue-bg" href="https://twitter.com/swcarpentry">Twitter</a>
+  <a class="label swc-blue-bg" href="https://github.com/swcarpentry">GitHub</a>
+  <a class="label swc-blue-bg" href="http://software-carpentry.org/feed.xml">RSS</a>
+  <a class="label swc-blue-bg" href="http://swcarpentry.github.io/2014-01-31-ucsb/license.html">License</a>
+  <a class="bugreport label swc-blue-bg" href="mailto:info@software-carpentry.org?subject=bug%20in%20index.html">Bug Report</a>
+</div>
+
+</body></html>
