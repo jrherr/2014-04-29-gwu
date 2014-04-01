@@ -1,209 +1,315 @@
-<h3>Overview</h3>
+<h2>Setup</h2>
+
+To participate in this Software Carpentry bootcamp, 
+you will need working copies of:
+<div id="setup-overview-bash" class="setup setup-bash">
+  <h4>The Bash Shell</h4>
+  <p>
+    Bash is a commonly-used shell. Using a shell gives you
+    more power to do more tasks more quickly with your
+    computer.
+  </p>
+</div>
+
+<div id="setup-overview-git" class="setup setup-git">
+  <h4>Git</h4>
+  <p>
+    Git is a state-of-the-art version control system. It
+    lets you track who made changes to what when and has
+    options for easily updating a shared or public version of
+    your code on <a href="https://github.com/">github.com</a>.
+  </p>
+</div>
+
+<div id="setup-overview-editor" class="setup setup-editor">
+  <h4>Editor</h4>
+  <p>
+    When you're writing code, it's nice to have a text
+    editor that is optimized for writing code, with features
+    like automatic color-coding of key words.
+  </p>
+</div>
+
+<div id="setup-overview-python" class="setup setup-python">
+  <h4>Python</h4>
+  <p>
+    Python is becoming more and more popular in scientific computing,
+    and it's a great language for teaching general programming concepts due to its easy-to-read syntax.
+    We will be using Python version 2.7.
+    Installing all the scientific packages for Python individually can be a bit difficult,
+    so we recommend using an all-in-one installer.
+  </p>
+</div>
+
+
+The instructions for installing each of these components is organized below by operating system.  
 
 <div class="row-fluid">
   <div class="span6">
-    <h4>Editor</h4>
-    <p>
-      When you're writing code, it's nice to have a text
-      editor that is optimized for writing code, with features
-      like automatic color-coding of key words.
-      The default text editor on Mac OS X and Linux is usually set to Vim,
-      which is not famous for being intuitive.
-      if you accidentally find yourself stuck in it,
-      try typing the escape key,
-      followed by ':q!' (colon, lower-case 'q', exclamation mark),
-      then hitting Return
-      to return to the shell.
-    </p>
-    <h4>The Bash Shell</h4>
-    <p>
-      Bash is a commonly-used shell. Using a shell gives you
-      more power to do more tasks more quickly with your
-      computer.
-    </p>
-    <h4>Git</h4>
-    <p>
-      Git is a state-of-the-art version control system. It
-      lets you track who made changes to what when and has
-      options for easily updating a shared or public version of
-      your code on <a href="https://github.com/">github.com</a>.
-    </p>
-  </div>
-  <div class="span6">
-    <h4>Python</h4>
-    <p>
-      Python is becoming very popular in scientific computing,
-      and it's a great language for teaching general programming concepts due to its easy-to-read syntax.
-      We teach with Python version 2.7,
-      since it is still the most widely used.
-      Installing all the scientific packages for Python individually can be a bit difficult,
-      so we recommend an all-in-one installer.
-    </p>
-  </div>
+
+  
+<h3>MacOSX</h3>
+  <div class="well">
+<div id="setup-macosx-bash" class="setup setup-macosx setup-bash">
+  <h4>Mac OS X / Bash</h4>
+  <p>
+    The default shell in all versions of Mac OS X is bash,
+    so no need to install anything.  You access bash from
+    the Terminal (found
+    in <code>/Applications/Utilities</code>).  You may want
+    to keep Terminal in your dock for this workshop.
+  </p>
 </div>
 
-<hr/>
+<div id="setup-macosx-editor" class="setup setup-macosx setup-editor">
+  <h4>Mac OS X / Editor</h4>
+  <p>
+    We recommend
+    <a href="http://www.barebones.com/products/textwrangler/">Text Wrangler</a> or
+    <a href="http://www.sublimetext.com/">Sublime Text</a>.
+  </p>
+</div>
 
+<div id="setup-macosx-git" class="setup setup-macosx setup-git">
+  <h4>Mac OS X / Git</h4>
+  <p><em>
+    Installing Git may require you to first install XCode.
+    This is a very large download (several gigabytes),
+    so please do it <strong>before</strong> arriving at the bootcamp.
+  </em></p>
+  <h5>For Mac OS X 10.7 and higher:</h5>
+  <p>
+    Go to the
+    <a href="https://developer.apple.com/xcode/">Xcode website</a>.
+    Get XCode from the App Store making
+    certain to install the command line tools (from the
+    Download preferences pane). Git is included in the
+    command line tools.
+  </p>
+  <h5>For Mac OS X 10.6</h5>
+  <p>
+    If you have Mac OS X 10.6,
+    first get XCode by going to
+    <a href="https://developer.apple.com/downloads/">the Apple developer site</a>.
+    You have to sign in with an Apple ID linked to a Developer account.
+    If you don't have one,
+    you can register and create one.
+    Once you log in,
+    go to page 8 and find "XCode 3.2.6 and iOS SDK 4.3 for Snow Leopard".
+    Click to open that section,
+    and then download the <code>.dmg</code> file.
+    Finally,
+    <a href="http://code.google.com/p/git-osx-installer/downloads/list?can=3">install just git</a>.
+  </p>
+</div>
+
+<div id="setup-macosx-python" class="setup setup-macosx setup-python">
+  <h4>Mac OS X / Python</h4>
+  <p>
+    We recommend the all-in-one scientific Python installer
+    <a href="http://continuum.io/downloads.html">Anaconda</a>.
+    (Installation requires using the shell and if you aren't
+    comfortable doing the installation yourself just
+    download the installer and we'll help you at the boot
+    camp.)
+  </p>
+  <ol>
+    <li>
+      Download the installer that matches your operating
+      system and save it in your home folder.
+    </li>
+    <li>
+      Open a terminal window.
+    </li>
+    <li>
+      Type <pre>bash Anaconda-</pre> and then press
+      tab. The name of the file you just downloaded should
+      appear.
+    </li>
+    <li>
+      Press enter. You will follow the text-only
+      prompts. When there is a colon at the bottom of the
+      screen press the down arrow to move down through the
+      text. Type <code>yes</code> and press enter to approve
+      the license. Press enter to approve the default
+      location for the files. Type <code>yes</code> and
+      press enter to prepend Anaconda to
+      your <code>PATH</code> (this makes the Anaconda
+      distribution the default Python).
+    </li>
+  </ol>
+</div>
+
+<!--<div id="setup-macosx-r" class="setup setup-macosx setup-r">
+  <h5>Mac OS X</h5>
+  <p>
+    Install R by downloading and running this
+    <a href="http://cran.r-project.org/bin/macosx/R-latest.pkg">.pkg
+    file</a> from The Comprehensive R Archive Network
+    (<a href="http://cran.r-project.org/index.html">CRAN</a>). Also,
+    please install the
+    <a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
+  </p>
+</div>
+-->
+  </div>
+  </div>
+  <div class="span6">
+  
 <h3>Windows</h3>
-
-<div class="row-fluid">
-  <div class="span6">
-    <h4>Software Carpentry Installer</h4>
-    <p>For an all-in-one installer:</p>
-    <ul>
-      <li>
-        Download the <a href="https://raw.github.com/swcarpentry/bc/master/setup/swc-windows-installer.py">installer</a>.
-      </li>
-      <li>
-        If the file opens directly in the browser select <strong>File&rarr;Save Page As</strong>
-        to download it to your computer.
-      </li>
-      <li>
-        Double click on the file to run it.
-      </li>
-    </ul>
-    <h4>Editor</h4>
-    <p>
-      <a href="http://notepad-plus-plus.org/">Notepad++</a> is a
-      popular free code editor for Windows.
-      Be aware that you must add its installation directory to your system path
-      in order to launch it from the command line
-      (or have other tools like Git launch it for you).
-      Please ask your instructor to help you do this.
-    </p>
-    <h4>Git Bash</h4>
-    <p>
-      Install Git for Windows by download and running
-      <a href="https://msysgit.googlecode.com/files/Git-1.8.4-preview20130916.exe">the installer</a>.
-      This will provide you with both Git and Bash in the Git Bash program.
-    </p>
-  </div>
-  <div class="span6">
-    <h4>Python</h4>
-    <ul>
-      <li>
-        Download and install  <a href="http://continuum.io/anacondace.html">Anaconda CE</a>.
-      </li>
-      <li>
-        Use all of the defaults for installation
-        <em>except</em>
-        make sure to check <strong>Make Anaconda the default Python</strong>.
-      </li>
-    </ul>
-  </div>
+  <div class="well">
+<div id="setup-windows-git" class="setup setup-windows setup-git">
+  <h4>Windows / Git Bash</h4>
+  <p>
+  Install Git for Windows
+  by <a href="https://msysgit.googlecode.com/files/Git-1.8.4-preview20130916.exe">
+  downloading and running the installer.</a>  This will provide you
+  with both Git as well as Bash in the Git Bash program.
+  </p>
 </div>
 
-<hr/>
-
-<h3>Mac OS X</h3>
-
-<div class="row-fluid">
-  <div class="span6">
-    <h4>Bash</h4>
-    <p>
-      The default shell in all versions of Mac OS X is bash,
-      so no need to install anything.  You access bash from
-      the Terminal (found
-      in <code>/Applications/Utilities</code>).  You may want
-      to keep Terminal in your dock for this workshop.
-    </p>
-    <h4>Editor</h4>
-    <p>
-      We recommend
-      <a href="http://www.barebones.com/products/textwrangler/">Text Wrangler</a> or
-      <a href="http://www.sublimetext.com/">Sublime Text</a>.
-      In a pinch, you can use <code>nano</code>,
-      which should be pre-installed.
-    </p>
-    <h4>Git</h4>
-    <p>
-      Install Git for Mac by download and running
-      <a href="http://git-scm.com/downloads">the installer</a>.
-    </p>
-  </div>
-  <div class="span6">
-    <h4>Python</h4>
-    <ul>
-      <li>
-        Download and install  <a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a>.
-      </li>
-      <li>
-        Use all of the defaults for installation
-        <em>except</em>
-        make sure to check <strong>Make Anaconda the default Python</strong>.
-      </li>
-    </ul>
-  </div>
+<div id="setup-windows-editor" class="setup setup-windows setup-editor">
+  <h4>Windows / Editor</h4>
+  
+  <p>
+    <a href="http://notepad-plus-plus.org/">Notepad++</a> is a
+    popular free code editor for Windows.
+  </p>
 </div>
 
-<hr/>
+<div id="setup-windows-anaconda" class="setup setup-windows setup-anaconda">
+  <h4>Windows / Anaconda Python</h4>
+  <ul>
+    <li>
+    We recommend the all-in-one scientific Python installer
+    <a href="http://continuum.io/downloads.html">Anaconda</a>.
+    </li>
+    <li>
+      Use all of the defaults for installation.
+    </li>
+  </ul>
+</div>
 
+<div id="setup-windows-swc" class="setup setup-windows setup-swc">
+  <h5>Windows / Software Carpentry Installer</h5>
+Finally, there is an optional script for installing the nano
+  editor.  Please install this after Anaconda and Git Bash
+  <ul>
+    <li>
+      Download the <a href="https://raw.github.com/swcarpentry/bc/master/setup/swc-windows-installer.py">installer</a>.
+    </li>
+    <li>
+      If the file opens directly in the browser select <strong>File→Save Page As</strong>
+      to download it to your computer.
+    </li>
+    <li>
+
+       (You may need to restart Windows first if this doesn't work).  Double click on the file to run it.
+    </li>
+  </ul>
+</div>
+
+<!--<div id="setup-windows-r" class="setup setup-windows setup-r">
+  <h4>Windows</h4>
+  <p>
+    Install R by downloading and running
+    this <a href="http://cran.r-project.org/bin/windows/base/release.htm">.exe
+    file</a> from The Comprehensive R Archive Network
+    (<a href="http://cran.r-project.org/index.html">CRAN</a>). Also, please install the
+    <a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
+  </p>
+</div>
+-->
+  </div>
+  
 <h3>Linux</h3>
+  <div class="well">
+<div id="setup-linux-bash" class="setup setup-linux setup-bash">
+  <h4>Linux / Bash</h4>
+  <p>
+    The default shell is usually <code>bash</code>,
+    but if your machine is set up differently
+    you can run it by opening a terminal and typing <code>bash</code>.
+    There is no need to install anything.
+  </p>
+</div>
 
-<div class="row-fluid">
-  <div class="span6">
-    <h4>Bash</h4>
-    <p>
-      The default shell is usually <code>bash</code>,
-      but if your machine is set up differently
-      you can run it by opening a terminal and typing <code>bash</code>.
-      There is no need to install anything.
-    </p>
-    <h4>Git</h4>
-    <p>
-      If Git is not already available on your machine you can try
-      to install it via your distro's package manager
-      (e.g. <code>apt-get</code>).
-    </p>
-    <h4>Editor</h4>
-    <p>
-      <a href="http://kate-editor.org/">Kate</a> is one option for Linux users.
-      In a pinch, you can use <code>nano</code>,
-      which should be pre-installed.
-    </p>
-  </div>
-  <div class="span6">
-    <h4>Python</h4>
-    <p>
-      We recommend the all-in-one scientific Python installer
-      <a href="http://continuum.io/downloads.html">Anaconda</a>.
-      (Installation requires using the shell and if you aren't
-      comfortable doing the installation yourself just
-      download the installer and we'll help you at the boot
-      camp.)
-    </p>
-    <ol>
-      <li>
-        Download the installer that matches your operating
-        system and save it in your home folder.
-      </li>
-      <li>
-        Open a terminal window.
-      </li>
-      <li>
-        Type <pre>bash Anaconda-</pre> and then press
-        tab. The name of the file you just downloaded should
-        appear.
-      </li>
-      <li>
-        Press enter. You will follow the text-only
-        prompts. When there is a colon at the bottom of the
-        screen press the down arrow to move down through the
-        text. Type <code>yes</code> and press enter to approve
-        the license. Press enter to approve the default
-        location for the files. Type <code>yes</code> and
-        press enter to prepend Anaconda to
-        your <code>PATH</code> (this makes the Anaconda
-        distribution the default Python).
-      </li>
-    </ol>
+<div id="setup-linux-git" class="setup setup-linux setup-git">
+  <h4>Linux / Git</h4>
+  <p>
+    If Git is not already available on your machine you can try
+    to install it via your distro's package manager
+    (e.g. <code>apt-get</code>).
+  </p>
+</div>
+
+<div id="setup-linux-editor" class="setup setup-linux setup-editor">
+  <h4>Linux / Editor</h4>
+  
+  <p>
+    <a href="http://kate-editor.org/">Kate</a> is one option for Linux users.
+  </p>
+</div>
+
+<div id="setup-linux-python" class="setup setup-linux setup-python">
+  <h4>Linux / Python</h4>
+  <p>
+    We recommend the all-in-one scientific Python installer
+    <a href="http://continuum.io/downloads.html">Anaconda</a>.
+    (Installation requires using the shell and if you aren't
+    comfortable doing the installation yourself just
+    download the installer and we'll help you at the boot
+    camp.)
+  </p>
+  
+  <ol>
+    <li>
+      Download the installer that matches your operating
+      system and save it in your home folder.
+    </li>
+    <li>
+      Open a terminal window..
+    </li>
+    <li>
+      Type <pre>bash Anaconda-</pre> and then press
+      tab. The name of the file you just downloaded should
+      appear.
+    </li>
+    <li>
+      Press enter. You will follow the text-only
+      prompts. When there is a colon at the bottom of the
+      screen press the down arrow to move down through the
+      text. Type <code>yes</code> and press enter to approve
+      the license. Press enter to approve the default
+      location for the files. Type <code>yes</code> and
+      press enter to prepend Anaconda to
+      your <code>PATH</code> (this makes the Anaconda
+      distribution the default Python).
+    </li>
+  </ol>
+</div>
+
+<!--<div id="setup-linux-r" class="setup setup-linux setup-r">
+  <h5>GNU/Linux</h5>
+  <p>
+    You can download the binary files for your distribution from The
+    Comprehensive R Archive Network
+    (<a href="http://cran.r-project.org/index.html">CRAN</a>). Or you
+    can use your package manager, e.g. for Debian/Ubuntu
+    run <code>apt-get install r-base</code>. Also, please install the
+    <a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
+  </p>
+</div>
+-->
   </div>
 </div>
+</div>
+
+<hr>
 
 <h3>Miscellaneous</h3>
-
-<div class="row-fluid">
-  <div class="span6">
+  <div class="well">
+  <div id="setup-virtual-machine" class="setup setup-virtual-machine">
     <h4>Virtual Machine</h4>
     <p>
       Some instructors prefer to have learners use a virtual machine (VM)
