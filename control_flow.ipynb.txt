@@ -1,0 +1,565 @@
+{
+ "metadata": {
+  "name": ""
+ },
+ "nbformat": 3,
+ "nbformat_minor": 0,
+ "worksheets": [
+  {
+   "cells": [
+    {
+     "cell_type": "heading",
+     "level": 1,
+     "metadata": {},
+     "source": [
+      "Control flow"
+     ]
+    },
+    {
+     "cell_type": "heading",
+     "level": 2,
+     "metadata": {},
+     "source": [
+      "Truth"
+     ]
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "Python has reserved words for booleans 'True' and 'False'"
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "print \"True is\", True # 'True' always evaluates to True\n",
+      "print \"False is\", False # 'False' always evaluates to False"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "We can combine booleans with the reserved keyword 'and'.\n",
+      "'and' checks to see whether _both_ expressions are True."
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "print \"True and True are\", True and True\n",
+      "print \"True and False are\", True and False\n",
+      "print \"False and True are\", False and True\n",
+      "print \"False and False are\", False and False"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "We can also combine booleans with the reserved keyword 'or'.\n",
+      "'or' checks to see whether _either_ expression is True."
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "print \"True or True are,\", True or True\n",
+      "print \"True or False are,\" True or False\n",
+      "print \"False or True are,\" False or True\n",
+      "print \"False and False are,\" False and False"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "We can test whether something is true and use this to decide whether to evaluate code.  Make sure to follow the 'if' statement with a colon and indent on the next line."
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "x = True\n",
+      "y = False\n",
+      "\n",
+      "if x:\n",
+      "    print \"x must have been true.\"\n",
+      "\n",
+      "if y:\n",
+      "    print \"y must have been true.\""
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "When the 'if' statement evaluates to False, the block of code is skipped.\n",
+      "The 'else' statement will be evaluated if the 'if' statement was False."
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "if x:\n",
+      "    print \"x must have been true.\"\n",
+      "else:\n",
+      "    print \"x must have been false.\""
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "You can negate an expression with the reserved keyword 'not'."
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "if not x:\n",
+      "    print \"x must have been false.\"\n",
+      "else:\n",
+      "    print \"x must have been true.\"\n",
+      "    \n",
+      "if not y:\n",
+      "    print \"y must have been false.\"\n",
+      "else:\n",
+      "    print \"y must have been true.\""
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "### Challenge:\n",
+      "1. Try these first in your head (or on paper), then test them in ipython (notebook or interpreter, your choice).\n",
+      "    ```\n",
+      "    False and True and False # think about what order of operations is doing here\n",
+      "    not(True or not(True))\n",
+      "    not(not(False) and not(not(True)))\n",
+      "    ```"
+     ]
+    },
+    {
+     "cell_type": "heading",
+     "level": 2,
+     "metadata": {},
+     "source": [
+      "Conditional expressions"
+     ]
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "Test for equality."
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "print \"1 == 1 is\", 1 == 1 # equal to\n",
+      "print \"'dog' == 'dog' is\", 'dog' == 'dog'"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "This is not the same as identity!"
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "x = 'I really enjoy python and I plan to use it on a regular basis in the future.'\n",
+      "y = 'I really enjoy python and I plan to use it on a regular basis in the future.'\n",
+      "print \"x is y is\", x is y\n",
+      "print \"x == y is\", x == y"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "Syntax is realy important, = is for assignment, == tests equality"
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "print \"1 = 1 is\", 1 = 1"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "We can test for inequality using != (like ~= in MATLAB) or 'not'."
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "print \"1 != 1 is\", 1 != 1 # not equal to\n",
+      "print \"not (1 == 1) is\", not(1 == 1) # not equal to"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "Floating point precision can sometimes cause some headaches."
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "x = 1.2 - 1.0\n",
+      "y = 0.2\n",
+      "print \"x == y is\", x == y"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "1.2 - 1.0"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "We can also use numerical comparisons."
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "print \"2 > 1 is\", 2 > 1\n",
+      "print \"2 < 1 is\", 2 < 1\n",
+      "print \"2 >= 1 is\", 2 >= 1\n",
+      "print \"1 <= 2 is\", 1 <= 2"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "And you can use these comparisons on strings too.\n",
+      "`>, <, >=, <=` tests use ascii numerical order (for ascii strings).\n",
+      "You can find out more [here](http://www.asciitable.com/), but in general for strings:\n",
+      "\n",
+      "0-9 < UPPERCASE < lowercase"
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "print \"'abc' > 'acb' is\", 'abc' > 'acb'\n",
+      "print \"'Aron' > 'Billy' is\", 'Aron' > 'Billy'\n",
+      "print \"'Josh' > 'Billy' is\", 'Josh' > 'Billy'\n",
+      "\n",
+      "print \"'A' < 'a' is\", 'A' < 'a'"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "### Challenge\n",
+      "How could you test (in one line) whether a variable x is in [0, 10)?  (Hint:  There is more than one way to do this.)"
+     ]
+    },
+    {
+     "cell_type": "heading",
+     "level": 2,
+     "metadata": {},
+     "source": [
+      "Tying it all together - Fizzbuzz"
+     ]
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "The modulus operator (modulo) gives you the remainder after division."
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "print '12 mod 10 =', 12 % 10\n",
+      "print '8 mod 4 =', 8 % 4"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "If you want to test for more than one thing, serially, you can use the `elif` keyword (short for else if)."
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "def fizzbuzz(n):\n",
+      "\t'''\n",
+      "\tFor the numbers \n",
+      "\t\n",
+      "\tFor an input integer, n, print the numbers from\n",
+      "\t1 to n, replacing multiples of 3 with \"Fizz\", \n",
+      "\tmultiples of 5 with \"Buzz\", and multiples of\n",
+      "\tboth with \"FizzBuzz\".\n",
+      "\t'''\n",
+      "\t\n",
+      "\tfor number in range(1, n+1):\n",
+      "\t\tif (number % 3 == 0) and (number % 5 == 0):\n",
+      "\t\t\tprint \"FizzBuzz!\"\n",
+      "\t\telif (number % 3 == 0):\n",
+      "\t\t\tprint \"Fizz!\"\n",
+      "\t\telif (number % 5 == 0):\n",
+      "\t\t\tprint \"Buzz!\"\n",
+      "\t\telse:\n",
+      "\t\t\tprint number"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "heading",
+     "level": 2,
+     "metadata": {},
+     "source": [
+      "Simple 'tests' using assertions"
+     ]
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "Sometimes we might want to test our inputs before starting some sort of time-consuming operation.  A quick way to test for this is to use an assertion."
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "def fahr_to_cel(fahr):\n",
+      "    '''Input fahrenheit temperature, output celsious temperature.'''\n",
+      "    return (fahr-32) * 5/9.0"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "This is our old friend, the Fahrenheit to Celsius conversion.  It isn't computationally expensive, but let's pretend that it is."
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "print '98.6 in F is ', fahr_to_cel(98.6), 'in C'"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "print '\"dog\" in in F is', fahr_to_cel(\"dog\"), 'in C'"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "It fails for strings (no big surprise).  Let's re-write the function, but this time we'll test to make sure the input is numerical.  First, we can use the `assert` statement."
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "assert type('hello') is str\n",
+      "assert type(4) is int\n",
+      "assert type(4.0) is float"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "`assert` will test whether the following statement is True.  If it is True, nothing happens (like above).  Let's see what happens if the statement is False."
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "assert type(4) is str"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "So let's add an assert to our script to check for non-numerical input."
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "def fahr_to_cel(fahr):\n",
+      "    '''Input fahrenheit temperature, output celsious temperature.'''\n",
+      "    assert (type(fahr) is int) or (type(fahr) is float)\n",
+      "    return (fahr-32) * 5/9.0"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "fahr_to_cel('dog')"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "If we ever need to use an assert to compare floating point numbers, we should use a tolerance."
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "x = 1.2 - 1.0\n",
+      "y = 0.2\n",
+      "\n",
+      "assert (x == y)"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "epsilon = 1e-10\n",
+      "\n",
+      "assert x-y < epsilon"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    }
+   ],
+   "metadata": {}
+  }
+ ]
+}
